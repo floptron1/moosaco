@@ -2,7 +2,6 @@ var result = "";
 var stdin = ["2 1 2", "4 2 3 4 1", "5 6 5 4 7 2","6 2 5 7 8 9 11", "7 1 2 3 4 5 6 7", "10 1 1 1 1 1 1 1 1 1 1 1", "1 1", "10 1 2 3 4 5 6 7 8 9 10", "10 10 9 8 7 6 5 4 3 2 151", "10 3 52 5 2 3 51 6 6 23 2147482647"];
 var stdout = ["YES YES ", "YES NO YES YES ", "NO NO NO NO YES ","NO YES NO YES NO ", "YES NO NO YES YES NO YES ", "YES NO NO YES YES NO YES YES YES NO ", "YES ", "YES NO YES NO YES NO YES NO YES NO ", "YES YES YES YES YES NO NO NO NO NO ", "YES NO NO YES YES NO YES YES NO YES NO "];
 document.getElementById('submit-btn').addEventListener('click', (event) => {
-    let input = document.getElementById('stdin-input').value;
     const file = document.getElementById('fileInput').files[0];
     const reader = new FileReader();
     reader.readAsText(file);
@@ -31,9 +30,11 @@ document.getElementById('submit-btn').addEventListener('click', (event) => {
                 result = result.replaceAll("\n", ' ');
                 if (result == stdout[i]){
                     console.log("PASS");
+                    document.getElementsByClassName("resultsDisplay")[i].style.backgroundColor = "green";
                 }
                 else{
-                    console.log("FAIL");
+                    console.log("FAIL");                    
+                    document.getElementsByClassName("resultsDisplay")[i].style.backgroundColor = "red";
                 }
             })
             .catch(error => alert('Error:', error));
