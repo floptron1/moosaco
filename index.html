@@ -15,13 +15,25 @@
             position: absolute;
             top: 10vh;
             width: 6.9vw;
-            height: 2vw;
+            height: 2vh;
             display: flex;
             justify-content: center;
             align-items: center;
             color: white;
             background-color: darkblue;
             text-decoration: none;
+        }
+        .resultsDisplay{
+            position:absolute;
+            background-color:grey;
+            width: 5vw;
+            height: 10vh;
+            top: 85vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 3vh;
         }
         #submit-btn{
             position: absolute;
@@ -70,6 +82,7 @@
             top: 80vh;
         }
     </style>
+    <base href = "../../../..">
 </head>
 <body>
     <a href = "index.html" id = "header">MooSA Computing Olympiad</a>
@@ -93,10 +106,18 @@
     <b id = "format" style = "top: 68vh"> Scoring </b>
     <a id = "problem" style = "top: 72vh"> Inputs 1-5: The favorite number of no two applicants are the same. </a>
     <a id = "problem" style = "top: 75vh"> Inputs 6-10: No further restrictions. </a>
-    <textarea placeholder="stdin input" id="stdin-input"></textarea>
-    <textarea placeholder="output will show here" id="stdout-output" readonly></textarea>
+    <a class = "resultsDisplay" style = "left: 20.5vw">P1</a>
+    <a class = "resultsDisplay" style = "left: 26.5vw">P2</a>
+    <a class = "resultsDisplay" style = "left: 32.5vw">P3</a>
+    <a class = "resultsDisplay" style = "left: 38.5vw">P4</a>
+    <a class = "resultsDisplay" style = "left: 44.5vw">P5</a>
+    <a class = "resultsDisplay" style = "left: 50.5vw">P6</a>
+    <a class = "resultsDisplay" style = "left: 56.5vw">P7</a>
+    <a class = "resultsDisplay" style = "left: 62.5vw">P8</a>
+    <a class = "resultsDisplay" style = "left: 68.5vw">P9</a>
+    <a class = "resultsDisplay" style = "left: 74.5vw">P10</a>
     <input type = "file" id = fileInput>
     <button id="submit-btn">Submit</button>
-    <script src = "script.js"></script>
+    <script src = "contests/2024/december/bronze/script.js"></script>
 </body>
 </html> 
