@@ -1,0 +1,3 @@
+/Users/al/Library/CloudStorage/OneDrive-DavidsonAcademy/2024 - 2025 School Year/SLS Something/MOOSACO/Admin/1.1 copy/cmake-build-debug/CMakeFiles/1_1.dir
+/Users/al/Library/CloudStorage/OneDrive-DavidsonAcademy/2024 - 2025 School Year/SLS Something/MOOSACO/Admin/1.1 copy/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/al/Library/CloudStorage/OneDrive-DavidsonAcademy/2024 - 2025 School Year/SLS Something/MOOSACO/Admin/1.1 copy/cmake-build-debug/CMakeFiles/rebuild_cache.dir

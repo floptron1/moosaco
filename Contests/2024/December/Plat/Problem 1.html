@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv='cache-control' content='no-cache'> 
+<meta http-equiv='expires' content='0'> 
+<meta http-equiv='pragma' content='no-cache'>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .problembox{
+            height: 60vh;
+            width: 50vw;
+            position: absolute;
+            top: 18.5vh;
+            left: 24vw;
+            border: solid;
+            border-color: black;
+            border-width: 0.2vh;
+        }
+        .sideboxes {
+            height: 100vh;
+            width: 20vw;
+            background-color: #555;
+            position: absolute;
+        }
+        .references {
+            position: absolute;
+            top: 10vh;
+            width: 6.9vw;
+            height: 2vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            background-color: darkblue;
+            text-decoration: none;
+        }
+        .resultsDisplay{
+            position:absolute;
+            background-color:grey;
+            width: 5vw;
+            height: 10vh;
+            top: 85vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 3vh;
+        }
+        #submit-btn{
+            position: absolute;
+            left: 40vw;
+            top: 80vh;
+        }
+        #header{
+            font-size: 6.5vh;
+            color: darkblue;
+            position: absolute;
+            top: 1vh;
+            left: 21vw;
+            user-select: none;
+            text-shadow: 0.5vh -0.5vh lightblue;
+            text-decoration: none;
+        }
+        #logo{
+            position: absolute;
+            top: 1vh;
+            left: 65vw;
+            height: 12vh;
+            width: 12vw;
+            user-select: none;
+        }
+        #title{
+            position: absolute;
+            left: 21%;
+            user-select: none;
+            font-size: 3vh;
+        }
+        #problem{
+            position: absolute;
+            left: 25vw;
+            font-size: 2vh;
+            margin-right: 25vw;
+        }
+        #format{
+            position: absolute;
+            left: 25vw;
+            font-size: 2.5vh;
+            margin-right: 25vw;
+        }
+        #fileInput{
+            position: absolute;
+            left: 25vw;
+            top: 80vh;
+        }
+    </style>
+    <base href = "../../../..">
+    <script id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
+    </script>
+</head>
+<body>
+    <a href = "index.html" id = "header">MooSA Computing Olympiad</a>
+    <a href = "index.html"><img src = "logo.png" id = "logo"></a>
+    <div class = "sideboxes" style = "left:80vw"></div>
+    <div class = "sideboxes" style = "left:0vw"></div>
+    <a class = problembox></a>
+    <a id = "title" style = "top: 10vh"> MOOSACO 2024 December Contest, Pointy Stick </a>
+    <a id = "title" style = "top: 14vh"> Problem 1, Bessie Traveling </a>
+    <a id = "problem" style = "top: 20vh"> 
+        Farmer John wants to sell milk to \(N\space(1 \leq N \leq20)\) barns, including his own.
+        He puts Bessie in charge of selling the \(N\) bottles of milk to the \(N\) barns starting at Farmer John's farm, Barn 1.
+        However, Farmer Nhoj stole Bessie's travel plans the night before she left!
+        As the milk spoils easily, help Bessie find the shortest path which visits all of the barns and returns to Farmer John's barn.
+        You are given \(\frac{N\cdot(N-1)}{2}\) distances in the form \(a_i, b_i, c_i\space(1 \leq a_i < b_i \leq N,\space 1 \leq c_i \leq 10^9)\), where \(c_i\) is the distance between barns \(a_i\) and \(b_i\).
+    </a>
+    <b id = "format" style = "top: 33vh"> Input Format </b>
+    <a id = "problem" style = "top: 37vh"> The first line of the integer will contain N. The following  \(\frac{N\cdot(N-1)}{2}\) lines will contain \(a_i, b_i, c_i\). </a>
+    <b id = "format" style = "top: 41vh"> Output Format</b>
+    <a id = "problem" style = "top: 45vh"> Print out the shortest possible path. </a>
+    <b id = "format" style = "top: 48vh"> Sample Input</b>
+    <a id = "problem" style = "top: 52vh"> 2 </a>
+    <a id = "problem" style = "top: 55vh"> 1 2 3 </a>
+    <b id = "format" style = "top: 58vh"> Sample Output</b>
+    <a id = "problem" style = "top: 62vh"> 6 </a>
+    <a id = "problem" style = "top: 65vh"> Bessie starts at Barn 1. She has to travel to Barn 2 and back to Barn 1, traveling 3 each time for 6 traveled in total.  </a>
+    <b id = "format" style = "top: 68vh"> Scoring </b>
+    <a id = "problem" style = "top: 72vh"> Inputs 1-5: \(N \leq 10\)</a>
+    <a id = "problem" style = "top: 75vh"> Inputs 6-10: No further restrictions. </a>
+    <a class = "resultsDisplay" style = "left: 20.5vw">P1</a>
+    <a class = "resultsDisplay" style = "left: 26.5vw">P2</a>
+    <a class = "resultsDisplay" style = "left: 32.5vw">P3</a>
+    <a class = "resultsDisplay" style = "left: 38.5vw">P4</a>
+    <a class = "resultsDisplay" style = "left: 44.5vw">P5</a>
+    <a class = "resultsDisplay" style = "left: 50.5vw">P6</a>
+    <a class = "resultsDisplay" style = "left: 56.5vw">P7</a>
+    <a class = "resultsDisplay" style = "left: 62.5vw">P8</a>
+    <a class = "resultsDisplay" style = "left: 68.5vw">P9</a>
+    <a class = "resultsDisplay" style = "left: 74.5vw">P10</a>
+    <input type = "file" id = fileInput>
+    <button id="submit-btn">Submit</button>
+    <script src = "contests/2024/december/plat/script.js"></script>
+</body>
+</html> 
